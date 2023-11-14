@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     font: 'jetBrains Mono';
-    
+    margin: 0;
     
 }
 .header{
