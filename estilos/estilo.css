@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font: 'jetBrains Mono';
+    
+    
+}
+.header{
+    background-color: #E09132;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-grow: 1;
+    
+    
+}
+.filhosHeader{
+    flex-basis: content;
+    width: 5%;
+    background-color: #FFEFCD;
+    border-radius: 5px;
+    border: 1px solid black;
+    min-width: 50px;
+
+}
+
+#logoHeader{
+    flex-basis: content;
+    width: 5%;
+    min-width: 50px;
+}
+.body{
+    display: flex;
+    
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.filhosHome{
+    width: 20%;
+    background-color: #FFEFCD;
+    border-radius: 5px;
+    border: 1px solid black;
+    min-width: 200px;
+    
+}
+
+.footer{
+    background-color: #E09132;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 80px;
+
+}
+
+#imgFooter{
+    max-height: 75px;
+    max-width: 200px;
+}
