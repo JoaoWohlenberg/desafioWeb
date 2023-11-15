@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    max-height: 80%;
+    min-height: 500px;
 
 }
 .filhosHome{
@@ -10,8 +12,8 @@
     background-color: #FFEFCD;
     border-radius: 5px;
     border: 1px solid black;
-    min-width: 200px;
-    min-height: 80px;
+    min-width: 400px;
+    min-height: 50px;
     font-size: 20px;
     font-family: 'JetBrains Mono', monospace;
     

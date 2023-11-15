@@ -1,9 +1,8 @@
-#formulario2{
+#formulario3{
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 700px;
-    
 
 }
 
@@ -20,14 +19,15 @@
     flex-direction: column;
     min-width: 50%;
     align-items: center;
+    justify-content: center;
 }
 
 #divConteudo2{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-width: 50%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #divAvancar{
@@ -37,19 +37,24 @@
     
 }
 
-.inputsFormulario2{
-    width: 20%;
+.inputsFormulario3{
+    
     background-color: #FFEFCD;
-    border-radius: 5px;;
-    min-width: 300px;
-    min-height: 50px;
-    font-size: 20px;
+    border-radius: 5px;
     font-family: 'JetBrains Mono', monospace;
+    
     
 }
 
-.textosFormulario2{
-    font-size: 28px;
+.textosFormulario3{
+    font-size: 20px;
+    min-width: 200px;
+    
+}
+
+.divMedidas{
+    display: flex;
+    align-items: center;
 }
 
 #botaoAvancar{
