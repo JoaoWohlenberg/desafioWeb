@@ -1,21 +1,29 @@
-#home{
+#relatorio{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
     max-height: 80%;
     min-height: 500px;
     padding: 10px;
 
 }
-.filhosHome{
-    width: 20%;
+
+.divRelatorio{
+    display: flex;
+    justify-content: flex-start;
+}
+p{
+    font-size: 100%;
+    
+}
+
+#botaoHistoricoDeMedidas{
     background-color: #FFEFCD;
     border-radius: 5px;
     border: 1px solid black;
-    min-width: 400px;
-    min-height: 50px;
-    font-size: 20px;
+    min-width: 10%;
+    min-height: 100%;
+    font-size: 100%;
     font-family: 'JetBrains Mono', monospace;
     
 }
