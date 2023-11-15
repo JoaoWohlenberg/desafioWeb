@@ -4,32 +4,38 @@
         <title>Exame de Antropometria</title>
         <meta charset="utf-8">
         <link href="estilos/estilo.css" rel="stylesheet"/>
-        <link href="estilos/home.css" rel="stylesheet"/>
+        <link href="estilos/cadastro.css" rel="stylesheet"/>
         <!--<script src="scripts/main.js"></script>-->
     </head>
     <body>
-        <div class="header">
-            <img src="imagens/logo.png" alt="logo do site, uma cruz estilizada" id="logoHeader"/>
-            <input class="filhosHeader" type="button" value="Home"/>
-            <input class="filhosHeader" type="button" value="Sobre"/>
-        </div>
-        <div class="body" id="home">
-            <h1>Instruções Pré-Exame</h1>
-            <h2>Antes de iniciar os exames certifique-se que seu paciente seguiu as seguintes recomendações:</h2>
-            <p>
-                <ul id="lista"><h3>
-                    <li>Não realizou atividades físicas antes do exame;</li>
-                    <li>Não passou hidratante ou óleo corporal antes do exame;</li>
-                    <li>Mulheres não devem estar no periodo pré-mesntrual ou menstrual;</li>
-                    <li>Paciente com traje adequado para o exame;</li>
-                    <li>De preferência o paciente deve estar em jejum e com a bexiga vazia;</li>
-                </ul>
-                </h3>
-            </p>
-            
-        </div>
-        <div class="footer">
+        <header class="cabecalho">
+            <input class="botao_nav" type="button" value="Home"/>
+            <input class="botao_nav" type="button" value="Sobre"/>
+        </header>
+
+        <main class="conteudo">
+            <section class="conteudo_principal" >
+                <h1 class="titulo">Instruções Pré-Exame</h1>
+                <h2 class="sub_titulo">Antes de iniciar os exames certifique-se que seu paciente seguiu as seguintes recomendações:</h2>
+                <p class="texto_lista">
+                    <ul id="lista">
+                        <h3>
+                        <li>Não realizou atividades físicas antes do exame;</li>
+                        <li>Não passou hidratante ou óleo corporal antes do exame;</li>
+                        <li>Mulheres não devem estar no periodo pré-mesntrual ou menstrual;</li>
+                        <li>Paciente com traje adequado para o exame;</li>
+                        <li>De preferência o paciente deve estar em jejum e com a bexiga vazia;</li>
+                        </h3>
+                    </ul>
+                </p>
+            </section>
+            <section class="botao_avancar">
+               <a href="cadastro2.html"><button type="button">Avancar</button> </a>   
+            </section>
+        </main>
+
+        <footer class="rodape">
             <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
-        </div>
+        </footer> 
     </body>
 </html>
