@@ -16,6 +16,7 @@ body{
     flex-direction: column;
     align-content: flex-start;
     max-height: 25%;
+    min-width: 15%;
     
     
 }
@@ -26,6 +27,7 @@ body{
     border-radius: 5px;
     border: 1px solid black;
     min-width: 50px;
+    min-height: 5%;
     font-size: 14px;
     font-family: 'JetBrains Mono', monospace;
 
@@ -34,7 +36,9 @@ body{
 #logoHeader{
     flex-basis: content;
     width: 5%;
-    min-width: 50px;
+    min-height: 5%;
+    min-width: 5px;
+    
 }
 .body{
     display: flex;
