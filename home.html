@@ -8,19 +8,19 @@
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
         <!--<script src="scripts/main.js"></script>-->
     </head>
+    <header class="cabecalho">
+        <a href="home.html"><button class="filhosHeader" type="button">Home</button></a>
+        <a href="sobre.html"><button class="filhosHeader" type="button">Sobre</button></a>
+    </header>
     <body>
-        <div class="header">
-            <input class="filhosHeader" type="button" value="Home"/>
-            <input class="filhosHeader" type="button" value="Sobre"/>
-        </div>
-        <div class="body" id="home">
+        <main class="body" id="home">
             <h1>Bem-vindo</h1>
-            <input class="filhosHome" type="button" value="Cadastrar um novo paciente"/>
-            <input class="filhosHome" type="button" value="Cadastrar uma nova avaliação"/>
-            <input class="filhosHome" type="button" value="Consultar um paciente"/>
-        </div>
-        <div class="footer">
-            <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
-        </div>
+            <a href="preExame.html"><button class="filhosHome" type="button">Cadastrar um novo paciente</button></a>
+            <a href="consulta.html"><button class="filhosHome" type="button">Cadastrar uma nova avaliação</button></a>
+            <a href="consulta.html"><button class="filhosHome" type="button">Consultar um paciente</button></a>
+        </main>
     </body>
+    <footer>
+        <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
+    </footer>
 </html>

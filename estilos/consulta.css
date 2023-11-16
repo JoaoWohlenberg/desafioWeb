@@ -1,20 +1,36 @@
-#home{
+.body{
+    font-family: 'JetBrains Mono', monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    max-height: 80%;
-    min-height: 500px;
-
+    max-width: 100%;
+    max-height: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-size: 24px;
 }
-.filhosHome{
-    width: 20%;
+
+.inputsBusca{
+    width: 500px;
     background-color: #FFEFCD;
-    border-radius: 5px;
-    border: 1px solid black;
-    min-width: 400px;
-    min-height: 50px;
+    border-radius: 5px;;
+    max-width: 500px;
+    max-height: 25px;
+    min-width: fit-content;
+    min-height: fit-content;
     font-size: 20px;
     font-family: 'JetBrains Mono', monospace;
     
+}
+
+form{
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+}
+#divBotoesConsultas{
+    display: flex;
+    flex-direction: column;
 }

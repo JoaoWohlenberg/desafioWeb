@@ -8,42 +8,60 @@
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
         <!--<script src="scripts/main.js"></script>-->
     </head>
+    <header class="cabecalho">
+        <a href="home.html"><button class="filhosHeader" type="button">Home</button></a>
+        <a href="sobre.html"><button class="filhosHeader" type="button">Sobre</button></a>
+    </header>
     <body>
-        <div class="header">
-            <input class="filhosHeader" type="button" value="Home"/>
-            <input class="filhosHeader" type="button" value="Sobre"/>
-        </div>
         <div class="body" id="formulario2">
-            <div id="divTitulo">
-                <h1>Dobras Cutâneas</h1>
+            <form>
+                <div id="divTitulo">
+                    <h1>Dobras Cutâneas</h1>
+                </div>
+                
+                <div class="divForm2">
+                    <label for="dobraBicipesETricipes">Bícipes e Trícipes:</label>
+                    <input type="number" id="dobraBicipesETricipes" class="inputsFormulario2"/>
+                </div>
+                <div class="divForm2">
+                    <label for="dobraSuprailiaca">Suprailiaca:</label>
+                    <input type="number" id="dobraSuprailiaca" class="inputsFormulario2"/>
+                </div>
+                <div class="divForm2">
+                    <label for="dobraSubescapular">Subescapular:</label>
+                    <input type="number" id="dobraSubescapular" class="inputsFormulario2"/>
+                </div>
+                <div class="divForm2">
+                    <label for="dobraAuxiliar">Auxiliar:</label>
+                    <input type="number" id="dobraAuxiliar" class="inputsFormulario2"/>
+                </div>
+                <div class="divForm2">
+                    <label for="cobraAbdominal">Abdominal:</label>
+                    <input type="number" id="cobraAbdominal" class="inputsFormulario2"/>
+                </div>
+                <div class="divForm2">
+                    <label for="dobraCoxa">Coxa:</label>
+                    <input type="number" id="dobraCoxa" class="inputsFormulario2"/>
+                </div>
+                <div class="divForm2">
+                    <label for="dobraPanturrilha">Panturrilha:</label>
+                    <input type="number" id="dobraPanturrilha" class="inputsFormulario2"/>
+                    <p></p>
+                    <button type="submit" class="botaosAvancarEVoltar">Salvar Dados</button>
+                    <p></p>
+                </div>
+                    
+                    
+                </div>  
+                <div class="botoes">
+                    <a href="formulario1.html"><button type="button" class="botaosAvancarEVoltar">Voltar</button></a>
+                    <a href="formulario3.html"><button type="button" class="botaosAvancarEVoltar">Avancar</button> </a>   
+                </div>
+            </form>    
+        </div>
 
-            </div>
-            <div id="divConteudo">
-                <div id="divConteudo1">
-                    <p class="textosFormulario2">Bícipes e Trícipes:</p>
-                    <input type="text" id="dobraBicipesETricipes" class="inputsFormulario2"/>
-                    <p class="textosFormulario2">Suprailiaca:</p>
-                    <input type="text" id="dobraSuprailiaca" class="inputsFormulario2"/>
-                    <p class="textosFormulario2">Subescapular:</p>
-                    <input type="text" id="dobraSubescapular" class="inputsFormulario2"/>
-                    <p class="textosFormulario2">Auxiliar:</p>
-                    <input type="text" id="dobraAuxiliar" class="inputsFormulario2"/>
-                </div>
-                <div id="divConteudo2">
-                    <p class="textosFormulario2">Abdominal:</p>
-                    <input type="text" id="cobraAbdominal" class="inputsFormulario2"/>
-                    <p class="textosFormulario2">Coxa:</p>
-                    <input type="text" id="dobraCoxa" class="inputsFormulario2"/>
-                    <p class="textosFormulario2">Panturrilha:</p>
-                    <input type="text" id="dobraPanturrilha" class="inputsFormulario2"/>
-                </div>
-            </div> 
-            <div id="divAvancar">
-                <input type="button" value="Avançar" id="botaoAvancar">
-            </div>       
-        </div>
-        <div class="footer">
-            <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
-        </div>
     </body>
+    <footer>
+        <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
+    </footer>
 </html>

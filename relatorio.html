@@ -8,11 +8,11 @@
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
         <!--<script src="scripts/main.js"></script>-->
     </head>
+    <header class="cabecalho">
+        <a href="home.html"><button class="filhosHeader" type="button">Home</button></a>
+        <a href="sobre.html"><button class="filhosHeader" type="button">Sobre</button></a>
+    </header>
     <body>
-        <div class="header">
-            <input class="filhosHeader" type="button" value="Home"/>
-            <input class="filhosHeader" type="button" value="Sobre"/>
-        </div>
         <div class="body" id="relatorio">
             <div class="divRelatorio">
                 <p>Data do Exame: </p>
@@ -55,15 +55,15 @@
                 <p>%</p>
             </div>
             <div class="divRelatorio">
-                <input type="button" value="Histórico de medidas" id="botaoHistoricoDeMedidas">
-            </div> 
+                <a href="relatorioDeMeididas.html"><button type="button" class="botaosAvancarEVoltar">Histórico de medidas</button></a>
             </div>
-            
-            
-            
-        </div>
-        <div class="footer">
-            <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
+            <div class="divRelatorio">
+                <a href="formulario3.html"><button type="button" class="botaosAvancarEVoltar">Voltar</button></a>
+                
+            </div> 
         </div>
     </body>
+    <footer>
+        <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
+    </footer>
 </html>

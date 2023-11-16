@@ -1,42 +1,40 @@
-#formulario3{
+.body{
+    font-family: 'JetBrains Mono', monospace;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    min-width: 100%;
-    
+    justify-content: center;
+    max-width: 100%;
+    max-height: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-size: 24px;
+}
 
+#divTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-width: fit-content;
 }
 
 #divConteudo{
     display: flex;
     flex-direction: row;
-    
-    
-    
+    max-height: fit-content;
+    min-height: fit-content;
 }
-#divConteudo1{
-    display: flex;
-    flex-direction: column;
-    min-width: fit-content;
-    align-items: flex-end;
-    justify-content: center;
-}
+
 
 #divConteudo2{
     display: flex;
     flex-direction: row;
-    min-width: fit-content;
-    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    border: 1 px solid black;
 }
 
-#divAvancar{
-    display: flex;
-    min-width: 100%;
-    justify-content: flex-end;
-    min-width: 100%;
-    
-    
-}
+
 
 .inputsFormulario3{
     
@@ -47,23 +45,20 @@
     
 }
 
-.textosFormulario3{
-    font-size: 20px;
-    min-width: 200px;
+.divForm3{
+    display: flex;
+    flex-direction: column;
     
 }
 
-.divMedidas{
-    display: flex;
-    align-items: center;
-}
-
-#botaoAvancar{
+.inputsFormulario3{
+    width: 250px;
     background-color: #FFEFCD;
-    border-radius: 5px;
-    border: 1px solid black;
-    min-width: 10%;
-    min-height: 100%;
+    border-radius: 5px;;
+    max-width: 500px;
+    max-height: 25px;
+    min-width: fit-content;
+    min-height: fit-content;
     font-size: 20px;
     font-family: 'JetBrains Mono', monospace;
     

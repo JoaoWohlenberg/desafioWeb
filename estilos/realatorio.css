@@ -1,21 +1,21 @@
-#relatorio{
+.body{
+    font-family: 'JetBrains Mono', monospace;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
-    max-height: 80%;
-    min-height: 500px;
-    padding: 10px;
-
+    max-width: 100%;
+    max-height: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-size: 24px;
 }
 
 .divRelatorio{
     display: flex;
     justify-content: flex-start;
 }
-p{
-    font-size: 100%;
-    
-}
+
 
 #botaoHistoricoDeMedidas{
     background-color: #FFEFCD;
@@ -23,7 +23,6 @@ p{
     border: 1px solid black;
     min-width: 10%;
     min-height: 100%;
-    font-size: 100%;
     font-family: 'JetBrains Mono', monospace;
     
 }
