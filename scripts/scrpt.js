@@ -1,3 +1,4 @@
+// teste de pagina step 
  alert("loaded");
  var form1 = document.getElementById("form1");
 
@@ -7,6 +8,7 @@ form1.addEventListener("submit", (e) =>{
 
     // nao atualiza a pagina para nao perder as infos
     e.preventDefault();
+    // teste de pagina step
     console.log("salvar");
 
     
@@ -37,7 +39,7 @@ form1.addEventListener("submit", (e) =>{
     usuarios.push({nome, profissional, data, peso, altura, idade});
     
     //converte o objeto em string
-    localStorage.setItem("usuarios", JSON.stringify("usuarios"));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
     
 });
     
