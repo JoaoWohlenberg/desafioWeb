@@ -1,5 +1,5 @@
 // teste de pagina step 
- alert("loaded");
+//  alert("loaded");
  var form1 = document.getElementById("form1");
 
 // espera o submit do botao salvar dados e realizar o fluxo
@@ -58,12 +58,8 @@ form1.addEventListener("submit", (e) =>{
     
     //converte o objeto em string
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    
-    
+    window.location.href = 'relatorio.html';
 });
-
-
-
 
 // regra imc = peso/(altura*altura)
 function calcularIMC(peso, altura) {

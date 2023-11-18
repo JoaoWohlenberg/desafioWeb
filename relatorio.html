@@ -6,7 +6,6 @@
         <link href="estilos/estilo.css" rel="stylesheet"/>
         <link href="estilos/realatorio.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
-        <!--<script src="scripts/main.js"></script>-->
     </head>
     <header class="cabecalho">
         <a href="home.html"><button class="filhosHeader" type="button">Home</button></a>
@@ -26,7 +25,7 @@
                 <p>Peso: </p>
                 <p id="relatorioPeso" > N/D </p>
                 <p>kg </p>
-                <p> (+/- 0 kg desde o último exame)</p>
+                <p></p>
             </div>
             <div class="divRelatorio">
                 <p>Altura: </p>
@@ -65,6 +64,32 @@
                 
             </div> 
         </div>
+        <script>
+            // pegar dados do Local storage
+            const dados_storage = JSON.parse(localStorage.getItem('usuarios'));
+            
+            // verificacao se há dados no storage
+            if (dados_storage && dados_storage.length > 0) {
+                const lastUserData = dados_storage[dados_storage.length - 1]; // Pega o último conjunto de dados
+                document.getElementById('relatorioData').textContent = lastUserData.data || 'N/D';
+                document.getElementById('relatorioNomePaciente').textContent = lastUserData.nome || 'N/D';
+                document.getElementById('relatorioPeso').textContent = lastUserData.peso || 'N/D';
+                document.getElementById('relatorioAltura').textContent = lastUserData.altura || 'N/D';
+                document.getElementById('relatorioIdade').textContent = lastUserData.idade || 'N/D';
+    
+                const imc = calcularIMC(lastUserData.peso, lastUserData.altura);
+                document.getElementById('relatorioIMC').textContent = imc.toFixed(2) || 'N/D';
+                // classificar imc
+            }
+            
+            // funcao do imc
+            function calcularIMC(peso, altura) {
+                const alturaMetros = altura / 100;
+                const imc = peso / (alturaMetros * alturaMetros);
+                return imc;
+            }
+        </script>
+        
     </body>
     <footer>
         <img src="imagens/img-footer.png" alt="Meditar, dormir, comer, corpo e saúde" id="imgFooter"/>
