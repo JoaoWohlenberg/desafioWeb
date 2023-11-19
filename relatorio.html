@@ -41,7 +41,7 @@
                 <p>IMC: </p>
                 <p id="relatorioIMC" >N/D</p>
                 <p>kg/m2</p>
-                <p id="ClassificaçãoIMC">(Classificação IMC)</p>
+                <p id="ClassificacaoIMC">(Classificação IMC)</p>
             </div>
             <div class="divRelatorio">
                 <p>Densidade Corporal: </p>
@@ -80,14 +80,21 @@
     
                 const imc = calcularIMC(lastUserData.peso, lastUserData.altura);
                 document.getElementById('relatorioIMC').textContent = imc.toFixed(2) || 'N/D';
-                // classificar imc
+
+                const classificacaoIMC = classIMC(imc);
+                console.log(classificacaoIMC);
+                
+
+                document.getElementById('ClassificacaoIMC').textContent = "(" + classificacaoIMC + ")"|| '(Classificação IMC)';
 
 
                 const dc = densidadeCorporal(lastUserData.somaDobras, lastUserData.idade);
                 document.getElementById('relatorioDensidadeCorporal').textContent = dc.toFixed(2) || 'N/D';
 
+            
                 const perDeGordura = percentualDeGordura(dc);
                 document.getElementById('relatorioPercentualGordura').textContent = perDeGordura.toFixed(2)|| 'N/D';
+
             }
             
             // funcao do imc
@@ -96,6 +103,7 @@
                 const imc = peso / (alturaMetros * alturaMetros);
                 return imc;
             }
+            
 
             function densidadeCorporal(somaDobras, idade){
                 return 1.112 - (0.00043499 * somaDobras) + (0.00000055 * (somaDobras * somaDobras)) - (0.00028826 * idade);
@@ -103,6 +111,30 @@
 
             function percentualDeGordura(dc){
                 return ((4.95/dc)-4.50)*100
+            }
+
+            function classIMC(imc){
+                var classificacaoIMC = "";
+                if (imc<18.5){
+                    classificacaoIMC = "Baixo Peso";
+                }else if(imc>=18.5 && imc<25){
+                    classificacaoIMC = "Peso normal";
+                }
+                else if (imc>=25 && imc<30){
+                    classificacaoIMC = "Soprepeso";
+                }
+                else if(imc>=30 && imc<35){
+                    classificacaoIMC = "Obesidade grau I";
+                }
+                else if(imc>=35 && imc <40){
+                    classificacaoIMC = "Obesidade grau II";
+                }
+
+                else {
+                    classificacaoIMC = "Obesidade grau II";
+                }
+
+                return classificacaoIMC;
             }
         </script>
         
