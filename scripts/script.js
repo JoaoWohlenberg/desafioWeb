@@ -13,27 +13,29 @@ form1.addEventListener("submit", (e) =>{
     
     // variaveis dos inputs
     var nome = document.getElementById("nome").value;
+    if(nome.)
     var profissional = document.getElementById("profissional").value;
     var data = document.getElementById("data").value;
-    var peso = document.getElementById("peso").value;
-    var altura = document.getElementById("altura").value;
-    var idade = document.getElementById("idade").value;
+    var peso = parseInt(document.getElementById("peso").value);
+    var altura = parseInt(document.getElementById("altura").value);
+    var idade = parseInt(document.getElementById("idade").value);
 
-    var dobraBicipesETricipes = document.getElementById("dobraBicipesETricipes").value;
-    var dobraSuprailiaca = document.getElementById("dobraSuprailiaca").value;
-    var dobraSubescapular = document.getElementById("dobraSubescapular").value;
-    var dobraAuxiliar = document.getElementById("dobraAuxiliar").value;
-    var cobraAbdominal = document.getElementById("cobraAbdominal").value;
-    var dobraCoxa = document.getElementById("dobraCoxa").value;
-    var dobraPanturrilha = document.getElementById("dobraPanturrilha").value;
+    var dobraBicipesETricipes = parseInt(document.getElementById("dobraBicipesETricipes").value);
+    var dobraSuprailiaca = parseInt(document.getElementById("dobraSuprailiaca").value);
+    var dobraSubescapular = parseInt(document.getElementById("dobraSubescapular").value);
+    var dobraAuxiliar = parseInt(document.getElementById("dobraAuxiliar").value);
+    var cobraAbdominal = parseInt(document.getElementById("cobraAbdominal").value);
+    var dobraCoxa = parseInt(document.getElementById("dobraCoxa").value);
+    var dobraPanturrilha = parseInt(document.getElementById("dobraPanturrilha").value);
+    var somaDobras = dobraBicipesETricipes + dobraSuprailiaca + dobraSubescapular + dobraAuxiliar + cobraAbdominal + dobraCoxa + dobraPanturrilha; 
 
-    var medidaTorax = document.getElementById("medidaTorax").value;
-    var medidaBracos = document.getElementById("medidaBracos").value;
-    var medidaCintura = document.getElementById("medidaCintura").value;
-    var medidaAbdomem = document.getElementById("medidaAbdomem").value;
-    var medidaQuadril = document.getElementById("medidaQuadril").value;
-    var medidaCoxas = document.getElementById("medidaCoxas").value;
-    var medidaGemeos = document.getElementById("medidaGemeos").value;
+    var medidaTorax = parseInt(document.getElementById("medidaTorax").value);
+    var medidaBracos = parseInt(document.getElementById("medidaBracos").value);
+    var medidaCintura = parseInt(document.getElementById("medidaCintura").value);
+    var medidaAbdomem = parseInt(document.getElementById("medidaAbdomem").value);
+    var medidaQuadril = parseInt(document.getElementById("medidaQuadril").value);
+    var medidaCoxas = parseInt(document.getElementById("medidaCoxas").value);
+    var medidaGemeos = parseInt(document.getElementById("medidaGemeos").value);
     
     
     // testar console *NAO ESQUECER*
@@ -43,6 +45,7 @@ form1.addEventListener("submit", (e) =>{
     console.log(peso);
     console.log(altura);
     console.log(idade);
+    console.log(somaDobras);
     // cria Array de Objetos
     let usuarios = new Array();
     
@@ -52,7 +55,7 @@ form1.addEventListener("submit", (e) =>{
         usuarios = JSON.parse(localStorage.getItem("usuarios"));
     }
     // adiciona os dados na variavel usuarios com os dados dos input
-    usuarios.push({nome, profissional, data, peso, altura, idade, dobraBicipesETricipes, dobraSuprailiaca, dobraSubescapular, dobraAuxiliar, cobraAbdominal, dobraCoxa, dobraPanturrilha, medidaTorax, medidaCintura, medidaAbdomem, medidaQuadril, medidaCoxas, medidaGemeos
+    usuarios.push({nome, profissional, data, peso, altura, idade, somaDobras, dobraBicipesETricipes, dobraSuprailiaca, dobraSubescapular, dobraAuxiliar, cobraAbdominal, dobraCoxa, dobraPanturrilha, medidaTorax, medidaBracos, medidaCintura, medidaAbdomem, medidaQuadril, medidaCoxas, medidaGemeos
      });
     console.log(usuarios);
     
@@ -67,3 +70,7 @@ function calcularIMC(peso, altura) {
     const imc = peso / (alturaMetros * alturaMetros);
     return imc;
   }
+
+function densidadeCorporal(somaDobras, idade){
+    return 1.112 - 0.00043499 * somaDobras + 0.00000055 * somaDobras * somaDobras - 0.00028826 * idade;
+}

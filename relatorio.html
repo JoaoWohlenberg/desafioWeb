@@ -76,10 +76,18 @@
                 document.getElementById('relatorioPeso').textContent = lastUserData.peso || 'N/D';
                 document.getElementById('relatorioAltura').textContent = lastUserData.altura || 'N/D';
                 document.getElementById('relatorioIdade').textContent = lastUserData.idade || 'N/D';
+                
     
                 const imc = calcularIMC(lastUserData.peso, lastUserData.altura);
                 document.getElementById('relatorioIMC').textContent = imc.toFixed(2) || 'N/D';
                 // classificar imc
+
+
+                const dc = densidadeCorporal(lastUserData.somaDobras, lastUserData.idade);
+                document.getElementById('relatorioDensidadeCorporal').textContent = dc.toFixed(2) || 'N/D';
+
+                const perDeGordura = percentualDeGordura(dc);
+                document.getElementById('relatorioPercentualGordura').textContent = perDeGordura.toFixed(2)|| 'N/D';
             }
             
             // funcao do imc
@@ -87,6 +95,14 @@
                 const alturaMetros = altura / 100;
                 const imc = peso / (alturaMetros * alturaMetros);
                 return imc;
+            }
+
+            function densidadeCorporal(somaDobras, idade){
+                return 1.112 - (0.00043499 * somaDobras) + (0.00000055 * (somaDobras * somaDobras)) - (0.00028826 * idade);
+            }
+
+            function percentualDeGordura(dc){
+                return ((4.95/dc)-4.50)*100
             }
         </script>
         
