@@ -18,7 +18,6 @@ form1.addEventListener("submit", (e) =>{
     var profissional = document.getElementById("profissional").value;
     dadosPreenchidosCorretamente = validaDadosTextos(profissional, "profissional", dadosPreenchidosCorretamente);
     var data = document.getElementById("data").value;
-    dadosPreenchidosCorretamente = validaData(data, "data", dadosPreenchidosCorretamente);
 
     var peso = parseInt(document.getElementById("peso").value);
     dadosPreenchidosCorretamente = validaDadosNumericos(peso, "peso", dadosPreenchidosCorretamente);
@@ -101,21 +100,10 @@ form1.addEventListener("submit", (e) =>{
         window.location.href = 'relatorio.html';
     }
     else{
-        alert("Verifique os campos em vermelho e preencha-os corretamente:\nValores numéricos não podem ser menores ou iguais a zero");
+        alert("Verifique os campos em vermelho e preencha-os corretamente:\n- Nomes não devem conter números\n- Valores numéricos não podem ser menores ou iguais a zero");
     }
     
 });
-
-// regra imc = peso/(altura*altura)
-function calcularIMC(peso, altura) {
-    const alturaMetros = altura/100;
-    const imc = peso / (alturaMetros * alturaMetros);
-    return imc;
-  }
-
-function densidadeCorporal(somaDobras, idade){
-    return 1.112 - 0.00043499 * somaDobras + 0.00000055 * somaDobras * somaDobras - 0.00028826 * idade;
-}
 
 function validaDadosNumericos(valor, id, controle){
     let input = document.getElementById(id);
@@ -146,17 +134,3 @@ function validaDadosTextos(valor, id, controle) {
     }
 }
 
-function validaData(valor, id, controle){
-    let input = document.getElementById(id);
-    now = new Date;
-    if (valor> now){
-        input.style.color = 'red';
-        input.style.border = '1px solid red';
-        return controle && false;
-    }
-    else {
-        input.style.color = 'black';
-        input.style.border = '1px solid black';
-        return  controle && true;
-    }
-}
