@@ -13,7 +13,6 @@ form1.addEventListener("submit", (e) =>{
     
     // variaveis dos inputs
     var nome = document.getElementById("nome").value;
-    if(nome.)
     var profissional = document.getElementById("profissional").value;
     var data = document.getElementById("data").value;
     var peso = parseInt(document.getElementById("peso").value);
@@ -24,10 +23,10 @@ form1.addEventListener("submit", (e) =>{
     var dobraSuprailiaca = parseInt(document.getElementById("dobraSuprailiaca").value);
     var dobraSubescapular = parseInt(document.getElementById("dobraSubescapular").value);
     var dobraAuxiliar = parseInt(document.getElementById("dobraAuxiliar").value);
-    var cobraAbdominal = parseInt(document.getElementById("cobraAbdominal").value);
+    var dobraAbdominal = parseInt(document.getElementById("dobraAbdominal").value);
     var dobraCoxa = parseInt(document.getElementById("dobraCoxa").value);
-    var dobraPanturrilha = parseInt(document.getElementById("dobraPanturrilha").value);
-    var somaDobras = dobraBicipesETricipes + dobraSuprailiaca + dobraSubescapular + dobraAuxiliar + cobraAbdominal + dobraCoxa + dobraPanturrilha; 
+    var dobraPeitoral = parseInt(document.getElementById("dobraPeitoral").value);
+    var somaDobras = dobraBicipesETricipes + dobraSuprailiaca + dobraSubescapular + dobraAuxiliar + dobraAbdominal + dobraCoxa + dobraPeitoral; 
 
     var medidaTorax = parseInt(document.getElementById("medidaTorax").value);
     var medidaBracos = parseInt(document.getElementById("medidaBracos").value);
