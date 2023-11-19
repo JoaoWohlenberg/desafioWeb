@@ -54,7 +54,7 @@ form1.addEventListener("submit", (e) =>{
         usuarios = JSON.parse(localStorage.getItem("usuarios"));
     }
     // adiciona os dados na variavel usuarios com os dados dos input
-    usuarios.push({nome, profissional, data, peso, altura, idade, somaDobras, dobraBicipesETricipes, dobraSuprailiaca, dobraSubescapular, dobraAuxiliar, cobraAbdominal, dobraCoxa, dobraPanturrilha, medidaTorax, medidaBracos, medidaCintura, medidaAbdomem, medidaQuadril, medidaCoxas, medidaGemeos
+    usuarios.push({nome, profissional, data, peso, altura, idade, somaDobras, dobraBicipesETricipes, dobraSuprailiaca, dobraSubescapular, dobraAuxiliar, dobraAbdominal, dobraCoxa, dobraPeitoral, medidaTorax, medidaBracos, medidaCintura, medidaAbdomem, medidaQuadril, medidaCoxas, medidaGemeos
      });
     console.log(usuarios);
     
